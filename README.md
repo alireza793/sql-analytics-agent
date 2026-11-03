@@ -623,5 +623,24 @@ matplotlib>=3.8
 **OS:** Windows (uses `os.startfile` for auto-open charts; on Linux/macOS this is a no-op — see `AUTO_OPEN_CHART`).
 
 ---
+## Statistical Analysis: Factor Influence
 
+We ran both descriptive and inferential tests to check whether factors like region and segment significantly affect revenue.
+
+**Descriptive methods:**
+- Weight × deviation from overall rate, summed across groups
+- Squared deviation divided by variance
+
+**Inferential method:**
+- p-value from statistical tests (ANOVA / Chi-square style)
+
+**Results:**
+- Descriptive scores were close to zero for all factors.
+- p-values were all above 35% (one reached 93%).
+
+**Conclusion:** No statistically significant relationship was found between any factor and revenue. All results are consistent with random variation.
+
+**Reason:** The FlowBench dataset is synthetic and generated via SHA-256 hashing, so all columns are independent and contain no real-world patterns or causal structure.
+
+**Recommendation:** The same analysis should be re-run on real company data to obtain meaningful statistical insights.
 *End of README.*
